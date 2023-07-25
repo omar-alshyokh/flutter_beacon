@@ -18,9 +18,9 @@ class _TabBroadcastingState extends State<TabBroadcasting> {
   final regexUUID = RegExp(
       r'[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}');
   final uuidController =
-      TextEditingController(text: 'CB10023F-A318-3394-4199-A8730C7C1AEC');
+      TextEditingController(text: '2b115131-1eb2-49e2-af61-401c870f2dda');
   final majorController = TextEditingController(text: '0');
-  final minorController = TextEditingController(text: '0');
+  final minorController = TextEditingController(text: '5503');
 
   bool get broadcastReady =>
       controller.authorizationStatusOk == true &&

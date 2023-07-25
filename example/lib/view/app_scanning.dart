@@ -51,7 +51,7 @@ class _TabScanningState extends State<TabScanning> {
       ),
       Region(
         identifier: 'BeaconType2',
-        proximityUUID: '6a84c716-0f2a-1ce9-f210-6a63bd873dd9',
+        proximityUUID: '2b115131-1eb2-49e2-af61-401c870f2dda',
       ),
     ];
 
@@ -64,9 +64,11 @@ class _TabScanningState extends State<TabScanning> {
 
     _streamRanging =
         flutterBeacon.ranging(regions).listen((RangingResult result) {
-      print(result);
+      print("result : $result");
       if (mounted) {
+        print("result.beacons : ${result.beacons}");
         setState(() {
+
           _regionBeacons[result.region] = result.beacons;
           _beacons.clear();
           _regionBeacons.values.forEach((list) {

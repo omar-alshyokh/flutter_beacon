@@ -196,6 +196,6 @@ class Beacon {
 
   @override
   String toString() {
-    return json.encode(toJson);
+    return toJson.toString();
   }
 }
